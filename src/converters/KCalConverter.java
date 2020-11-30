@@ -5,7 +5,9 @@ package converters;
 
 /**
  * @author Gabriel
- *
+ * @version 1.0
+ * @since November 14th
+ * @see AbstractConverter
  */
 public class KCalConverter extends AbstractConverter {
 	MeasureType type = MeasureType.ENERGY;
@@ -13,7 +15,9 @@ public class KCalConverter extends AbstractConverter {
 	final String title = "Kilo Calory (kcal)";
 
 	/**
-	 * @param type
+	 * Overloaded Constructor
+	 * 
+	 * @param type : measurement category
 	 */
 	public KCalConverter(MeasureType type) {
 		super(type);
@@ -21,7 +25,7 @@ public class KCalConverter extends AbstractConverter {
 	}
 
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public KCalConverter() {
 		super();
@@ -29,15 +33,25 @@ public class KCalConverter extends AbstractConverter {
 		super.title = title;
 	}
 
+	/**
+	 * {@summary KCal to Joule}
+	 * 
+	 * @param n - number being converted to BaseUnit
+	 */
 	@Override
 	public double toBaseUnit(double n) {
-		n = n * 4186.7999;
+		n = n * 4186.8;
 		return super.toBaseUnit(n);
 	}
 
+	/**
+	 * {@summary Joule to KCal}
+	 * 
+	 * @param n - number being converted from BaseUnit
+	 */
 	@Override
 	public double fromBaseUnit(double n) {
-		n = n / 4184;
+		n = n / 4186.8;
 		return super.fromBaseUnit(n);
 	}
 }

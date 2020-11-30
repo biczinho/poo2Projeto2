@@ -5,7 +5,9 @@ package converters;
 
 /**
  * @author Gabriel
- *
+ * @version 1.0
+ * @since November 14th
+ * @see AbstractConverter
  */
 public class EVConverter extends AbstractConverter {
 	MeasureType type = MeasureType.ENERGY;
@@ -13,7 +15,9 @@ public class EVConverter extends AbstractConverter {
 	final String title = "Eletro-Volt (EV)";
 
 	/**
-	 * @param type
+	 * Overloaded Constructor
+	 * 
+	 * @param type : measurement category
 	 */
 	public EVConverter(MeasureType type) {
 		super(type);
@@ -21,7 +25,7 @@ public class EVConverter extends AbstractConverter {
 	}
 
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public EVConverter() {
 		super();
@@ -29,15 +33,25 @@ public class EVConverter extends AbstractConverter {
 		super.title = title;
 	}
 
+	/**
+	 * {@summary Electro-Volt to Joule}
+	 * 
+	 * @param n - number being converted to BaseUnit
+	 */
 	@Override
 	public double toBaseUnit(double n) {
-		double r = n / 6.2415E18;
-		return super.toBaseUnit(r);
+		n = n * 1.6E-19;
+		return super.toBaseUnit(n);
 	}
 
+	/**
+	 * {@summary Joule to Electro-Volt}
+	 * 
+	 * @param n - number being converted from BaseUnit
+	 */
 	@Override
 	public double fromBaseUnit(double n) {
-		n = n * 6.2415E18;
+		n = n / 1.6E-19;
 		return super.fromBaseUnit(n);
 	}
 }

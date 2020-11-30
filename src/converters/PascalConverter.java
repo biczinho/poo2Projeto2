@@ -5,7 +5,9 @@ package converters;
 
 /**
  * @author Gabriel
- *
+ * @version 1.0
+ * @since November 14th
+ * @see AbstractConverter
  */
 public class PascalConverter extends AbstractConverter {
 	MeasureType type = MeasureType.PRESSURE;
@@ -13,7 +15,9 @@ public class PascalConverter extends AbstractConverter {
 	final String title = "Pascal (Pa)";
 
 	/**
-	 * @param type
+	 * Overloaded Constructor
+	 * 
+	 * @param type : measurement category
 	 */
 	public PascalConverter(MeasureType type) {
 		super(type);
@@ -21,7 +25,7 @@ public class PascalConverter extends AbstractConverter {
 	}
 
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public PascalConverter() {
 		super();

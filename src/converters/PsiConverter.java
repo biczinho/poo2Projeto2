@@ -5,7 +5,9 @@ package converters;
 
 /**
  * @author Gabriel
- *
+ * @version 1.0
+ * @since November 14th
+ * @see AbstractConverter
  */
 public class PsiConverter extends AbstractConverter {
 	MeasureType type = MeasureType.PRESSURE;
@@ -13,7 +15,9 @@ public class PsiConverter extends AbstractConverter {
 	final String title = "Psi (lbf/in^2)";
 
 	/**
-	 * @param type
+	 * Overloaded Constructor
+	 * 
+	 * @param type : measurement category
 	 */
 	public PsiConverter(MeasureType type) {
 		super(type);
@@ -21,7 +25,7 @@ public class PsiConverter extends AbstractConverter {
 	}
 
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public PsiConverter() {
 		super();
@@ -29,12 +33,22 @@ public class PsiConverter extends AbstractConverter {
 		super.title = title;
 	}
 
+	/**
+	 * {@summary PSI to Pascal}
+	 * 
+	 * @param n - number being converted to BaseUnit
+	 */
 	@Override
 	public double toBaseUnit(double n) {
 		n = n * 6894.76;
 		return super.toBaseUnit(n);
 	}
 
+	/**
+	 * {@summary Pascal to PSI}
+	 * 
+	 * @param n - number being converted from BaseUnit
+	 */
 	@Override
 	public double fromBaseUnit(double n) {
 		n = n / 6894.76;

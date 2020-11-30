@@ -5,7 +5,9 @@ package converters;
 
 /**
  * @author Gabriel
- *
+ * @version 1.0
+ * @since November 14th
+ * @see AbstractConverter
  */
 public class SecondsConverter extends AbstractConverter {
 	MeasureType type = MeasureType.TIME;
@@ -13,7 +15,9 @@ public class SecondsConverter extends AbstractConverter {
 	final String title = "Seconds (s)";
 
 	/**
-	 * @param type
+	 * Overloaded Constructor
+	 * 
+	 * @param type : measurement category
 	 */
 	public SecondsConverter(MeasureType type) {
 		super(type);
@@ -21,7 +25,7 @@ public class SecondsConverter extends AbstractConverter {
 	}
 
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public SecondsConverter() {
 		super();

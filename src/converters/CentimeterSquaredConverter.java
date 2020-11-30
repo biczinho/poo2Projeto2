@@ -4,22 +4,22 @@
 package converters;
 
 /**
- * @author Gabriel
+ * @author Cleyvesson
  * @version 1.0
- * @since November 14th
+ * @since November 28th
  * @see AbstractConverter
  */
-public class CubicMeterConverter extends AbstractConverter {
-	MeasureType type = MeasureType.VOLUME;
-//	base type is LITER
-	final String title = "Cubic Meter (m^3)";
+public class CentimeterSquaredConverter extends AbstractConverter {
+	MeasureType type = MeasureType.AREA;
+//	base type is METER^2
+	final String title = "Square Centimeter (cm^2)";
 
 	/**
 	 * Overloaded Constructor
 	 * 
 	 * @param type : measurement category
 	 */
-	public CubicMeterConverter(MeasureType type) {
+	public CentimeterSquaredConverter(MeasureType type) {
 		super(type);
 		// TODO Auto-generated constructor stub
 	}
@@ -27,31 +27,32 @@ public class CubicMeterConverter extends AbstractConverter {
 	/**
 	 * Default Constructor
 	 */
-	public CubicMeterConverter() {
+	public CentimeterSquaredConverter() {
 		super();
 		super.type = type;
 		super.title = title;
 	}
 
 	/**
-	 * {@summary CubicMeter to Liter}
+	 * {@summary cm^2 to m^2}
 	 * 
-	 * @param n - number being converted into BaseUnit
+	 * @param n - number being converted to BaseUnit
 	 */
 	@Override
 	public double toBaseUnit(double n) {
-		n = n * 1000;
+		n = n / 10000;
 		return super.toBaseUnit(n);
 	}
 
 	/**
-	 * {@summary Liter to CubicMeter}
+	 * {@summary m^2 to cm^2}
 	 * 
 	 * @param n - number being converted from BaseUnit
 	 */
 	@Override
 	public double fromBaseUnit(double n) {
-		n = n / 1000;
+		n = n * 10000;
 		return super.fromBaseUnit(n);
 	}
+
 }

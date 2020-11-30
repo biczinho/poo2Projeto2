@@ -5,7 +5,9 @@ package converters;
 
 /**
  * @author Gabriel
- *
+ * @version 1.0
+ * @since November 14th
+ * @see AbstractConverter
  */
 public class FeetConverter extends AbstractConverter {
 	MeasureType type = MeasureType.DISTANCE;
@@ -13,7 +15,9 @@ public class FeetConverter extends AbstractConverter {
 	final String title = "Feet (ft)";
 
 	/**
-	 * @param type
+	 * Overloaded Constructor
+	 * 
+	 * @param type : measurement category
 	 */
 	public FeetConverter(MeasureType type) {
 		super(type);
@@ -21,7 +25,7 @@ public class FeetConverter extends AbstractConverter {
 	}
 
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public FeetConverter() {
 		super();
@@ -29,6 +33,11 @@ public class FeetConverter extends AbstractConverter {
 		super.title = title;
 	}
 
+	/**
+	 * {@summary Feet to Meter}
+	 * 
+	 * @param n - number being converted to BaseUnit
+	 */
 	@Override
 	public double toBaseUnit(double n) {
 		// TODO Auto-generated method stub
@@ -36,6 +45,11 @@ public class FeetConverter extends AbstractConverter {
 		return super.toBaseUnit(n);
 	}
 
+	/**
+	 * {@summary Meter to Feet}
+	 * 
+	 * @param n - number being converted from BaseUnit
+	 */
 	@Override
 	public double fromBaseUnit(double n) {
 		// TODO Auto-generated method stub

@@ -15,6 +15,8 @@ public class CentimeterConverter extends AbstractConverter {
 	public String title = "Centimeter (cm)";
 
 	/**
+	 * Overloaded Constructor
+	 * 
 	 * @param type : measurement category
 	 */
 	public CentimeterConverter(MeasureType type) {
@@ -22,6 +24,9 @@ public class CentimeterConverter extends AbstractConverter {
 //		this is needed because the implicit super constructor is undefined.
 	}
 
+	/**
+	 * Default Constructor
+	 */
 	public CentimeterConverter() {
 		super();
 		super.type = type;

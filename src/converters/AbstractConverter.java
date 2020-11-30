@@ -15,14 +15,17 @@ public abstract class AbstractConverter {
 	public String title = "";
 
 	/**
-	 * {@summary Overloaded Constructor}
+	 * Overloaded Constructor
 	 * 
-	 * @param type
+	 * @param type : measurement category
 	 */
 	public AbstractConverter(MeasureType type) {
 		this.type = type;
 	}
 
+	/**
+	 * Default Constructor
+	 */
 	public AbstractConverter() {
 		// TODO Auto-generated constructor stub
 

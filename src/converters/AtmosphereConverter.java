@@ -16,6 +16,8 @@ public class AtmosphereConverter extends AbstractConverter {
 	//final Double rate = 101325;
 
 	/**
+	 * Overloaded Constructor
+	 * 
 	 * @param type : measurement category
 	 */
 	public AtmosphereConverter(MeasureType type) {
@@ -24,7 +26,7 @@ public class AtmosphereConverter extends AbstractConverter {
 	}
 
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public AtmosphereConverter() {
 		super();

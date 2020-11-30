@@ -5,7 +5,9 @@ package converters;
 
 /**
  * @author Gabriel
- *
+ * @version 1.0
+ * @since November 14th
+ * @see AbstractConverter
  */
 public class LiterConverter extends AbstractConverter {
 	MeasureType type = MeasureType.VOLUME;
@@ -13,7 +15,9 @@ public class LiterConverter extends AbstractConverter {
 	final String title = "Liter (L)";
 
 	/**
-	 * @param type
+	 * Overloaded Constructor
+	 * 
+	 * @param type : measurement category
 	 */
 	public LiterConverter(MeasureType type) {
 		super(type);
@@ -21,7 +25,7 @@ public class LiterConverter extends AbstractConverter {
 	}
 
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public LiterConverter() {
 		super();

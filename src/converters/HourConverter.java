@@ -5,7 +5,9 @@ package converters;
 
 /**
  * @author Gabriel
- *
+ * @version 1.0
+ * @since November 14th
+ * @see AbstractConverter
  */
 public class HourConverter extends AbstractConverter {
 	MeasureType type = MeasureType.TIME;
@@ -13,7 +15,9 @@ public class HourConverter extends AbstractConverter {
 	final String title = "Hour (h)";
 
 	/**
-	 * @param type
+	 * Overloaded Constructor
+	 * 
+	 * @param type : measurement category
 	 */
 	public HourConverter(MeasureType type) {
 		super(type);
@@ -21,7 +25,7 @@ public class HourConverter extends AbstractConverter {
 	}
 
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public HourConverter() {
 		super();
@@ -29,12 +33,22 @@ public class HourConverter extends AbstractConverter {
 		super.title = title;
 	}
 
+	/**
+	 * {@summary Hour to Seconds}
+	 * 
+	 * @param n - number being converted to BaseUnit
+	 */
 	@Override
 	public double toBaseUnit(double n) {
 		n = n * 3600;
 		return super.toBaseUnit(n);
 	}
 
+	/**
+	 * {@summary Seconds to Hour}
+	 * 
+	 * @param n - number being converted from BaseUnit
+	 */
 	@Override
 	public double fromBaseUnit(double n) {
 		n = n / 3600;

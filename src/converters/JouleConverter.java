@@ -5,7 +5,9 @@ package converters;
 
 /**
  * @author Gabriel
- *
+ * @version 1.0
+ * @since November 14th
+ * @see AbstractConverter
  */
 public class JouleConverter extends AbstractConverter {
 	MeasureType type = MeasureType.ENERGY;
@@ -13,7 +15,9 @@ public class JouleConverter extends AbstractConverter {
 	final String title = "Joule (J)";
 
 	/**
-	 * @param type
+	 * Overloaded Constructor
+	 * 
+	 * @param type : measurement category
 	 */
 	public JouleConverter(MeasureType type) {
 		super(type);
@@ -21,7 +25,7 @@ public class JouleConverter extends AbstractConverter {
 	}
 
 	/**
-	 * 
+	 * Default Constructor
 	 */
 	public JouleConverter() {
 		super();
