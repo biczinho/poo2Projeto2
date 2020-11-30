@@ -7,22 +7,23 @@ package converters;
  * @author Gabriel
  * @version 1.0
  * @since November 14th
- * @see AbstractConverter
  */
-public class CentimeterConverter extends AbstractConverter {
+public class MeterConverter extends AbstractConverter {
 	MeasureType type = MeasureType.DISTANCE;
 //	base type is METER
-	public String title = "Centimeter (cm)";
+	final String title = "Meter (m)";
 
 	/**
+	 * <h2>Constructor</h2>
+	 * 
 	 * @param type : measurement category
 	 */
-	public CentimeterConverter(MeasureType type) {
+	public MeterConverter(MeasureType type) {
 		super(type);
 //		this is needed because the implicit super constructor is undefined.
 	}
 
-	public CentimeterConverter() {
+	public MeterConverter() {
 		super();
 		super.type = type;
 		super.title = title;
@@ -35,19 +36,12 @@ public class CentimeterConverter extends AbstractConverter {
 	 */
 	@Override
 	public double toBaseUnit(double n) {
-		n = n / 100;
 		return super.toBaseUnit(n);
 //		sending the number to the super class before returning, will be useful later.
 	}
 
-	/**
-	 * {@summary Meter to Centimeter}
-	 * 
-	 * @param n - number being converted from BaseUnit
-	 */
 	@Override
 	public double fromBaseUnit(double n) {
-		n = n * 100;
 		return super.fromBaseUnit(n);
 		//		sending the number to the super class before returning, will be useful later.
 	}
