@@ -63,7 +63,7 @@ public class ConverterManager {
 	/**
 	 * {@summary Method to find all converters in the Package.}
 	 * 
-	 * @return List<Class<AbstractConverter>> of all Converters found in Package.
+	 * @return &lt;List&lt;Class&gt;AbstractConverter&gt; of all Converters found in Package.
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Class<AbstractConverter>> getConverters() {
@@ -91,7 +91,7 @@ public class ConverterManager {
 	 * Finds Converters filtered by measureType.}
 	 * 
 	 * @param measureType : String to filter Converters.
-	 * @return List<Class<AbstractConverter>> of Converter found in package, and filtered.
+	 * @return List&lt;Class&lt;AbstractConverter&gt;&gt; of Converter found in package, and filtered.
 	 */
 	public List<Class<AbstractConverter>> getConverters(String measureType) {
 		List<Class<AbstractConverter>> classes = new ArrayList<Class<AbstractConverter>>();
